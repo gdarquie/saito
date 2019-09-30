@@ -1,10 +1,11 @@
 import React from 'react';
 import './App.css';
-import {Reader} from "./Reader";
 
 function App() {
   return (
-    <Reader />
+        <div>
+            <h1>Page d'accueil</h1>
+        </div>
   );
 }
 
