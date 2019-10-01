@@ -1,6 +1,5 @@
 import React from 'react';
-import { Draggable } from '@shopify/draggable';
-import { Droppable } from '@shopify/draggable';
+import { Draggable, Droppable } from '@shopify/draggable';
 
 const API_URL = 'http://localhost:8000';
 const SUFFIX_URL = '/fragments';
@@ -37,7 +36,7 @@ export class Reader extends React.Component{
     render() {
         const { fragments } = this.state;
 
-        const draggable = new Draggable(document.querySelectorAll('ul'), {
+        const draggable = new Draggable(document.querySelectorAll('.container.ul'), {
             draggable: 'li'
         });
 
