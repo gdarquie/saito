@@ -9,24 +9,23 @@ import { Writer } from "./Writer";
 
 const routing = (
     <Router>
-        <div>
-            <ul>
-                <li>
-                    <Link to="/">Accueil</Link>
+        <div className="nav-menu navbar  navbar-expand-lg navbar-light bg-light">
+            <span className="navbar-brand"><Link className="nav-link" to="/">Saito</Link></span>
+
+            <ul className="navbar-nav mr-auto">
+                <li className="nav-item">
+                    <Link className="nav-link" to="/reader">Reader</Link>
                 </li>
-                <li>
-                    <Link to="/reader">Reader</Link>
-                </li>
-                <li>
-                    <Link to="/writer">Writer</Link>
+                <li className="nav-item">
+                    <Link className="nav-link" to="/writer">Writer</Link>
                 </li>
             </ul>
-            <Route exact path="/" component={App} />
-            <Route path="/reader" component={Reader} />
-            <Route path="/writer" component={Writer} />
         </div>
+        <Route exact path="/" component={App} />
+        <Route path="/reader" component={Reader} />
+        <Route path="/writer" component={Writer} />
     </Router>
-)
+);
 
 ReactDOM.render(routing, document.getElementById('root'));
 
