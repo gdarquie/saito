@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@shopify/draggable": "^1.0.0-beta.8",
+    "dotenv": "^8.1.0",
     "react": "^16.10.1",
     "react-dom": "^16.10.1",
     "react-router-dom": "^5.1.1",
