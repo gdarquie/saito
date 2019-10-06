@@ -18,9 +18,10 @@ export class Writer extends React.Component{
 
     saveFragment = () => {
         let value = document.getElementById('writerTextArea').value;
+        value = JSON.stringify(value);
 
-        let data = '{"content": "'+value+'"}';
-        var httpHeaders = { 'Accept': '*/*','Content-Type' : 'application/json' };
+        let data = '{"content": '+value+'}';
+        var httpHeaders = { 'Accept': '*/*','Content-Type' : 'application/json'};
         var myHeaders = new Headers(httpHeaders);
 
         var myInit = {
