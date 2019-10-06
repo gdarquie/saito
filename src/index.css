@@ -12,6 +12,9 @@ code {
     monospace;
 }
 
+.hidden {
+  visibility: hidden
+}
 
 .item { height: 100%; }
 .dropzone { outline: solid 1px; height: 50px; }

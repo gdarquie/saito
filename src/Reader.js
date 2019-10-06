@@ -10,7 +10,7 @@ export class Reader extends React.Component{
         super(props);
 
         this.state = {
-            fragments: []
+            fragments: [],
         };
     }
 
@@ -34,8 +34,6 @@ export class Reader extends React.Component{
     }
 
     render() {
-        const { fragments } = this.state;
-
         const draggable = new Draggable(document.querySelectorAll('.container.ul'), {
             draggable: 'li'
         });
@@ -70,15 +68,6 @@ export class Reader extends React.Component{
 
                 <div className="container">
                     <div className="dropzone"></div>
-                </div>
-
-                <div>
-                    {fragments.map(fragment =>
-                        <div className="fragment card" key={fragment.code}>
-                            <h2>{fragment.code}</h2>
-                            <p>{fragment.content}</p>
-                        </div>
-                    )}
                 </div>
             </div>
         )
